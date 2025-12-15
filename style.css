@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+}
+
+body {
+  background: #0f1117;
+  color: #e6e6e6;
+  font-family: system-ui, sans-serif;
+    font-size: 1.5rem; 
+  line-height: 1.6;
+
+}
+
+/* TOP BAR */
+.topbar {
+  height: 56px;
+  background: #161b22;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #222;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.topbar >*{
+    
+    padding: 20px;
+}
+
+.topbar li a {
+  display: flex;
+  padding: 5    px;
+  color: #e6e6e6;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.topbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+}
+
+.topbar ul > *{
+    padding: 20px;
+}
+
+
+/* LAYOUT */
+.layout {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 300px;
+  height: calc(100vh - 56px);
+  background: #161b22;
+  border-right: 1px solid #222;
+  padding: 16px;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  overflow-y: auto;
+
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 6px 10px;
+  color: #e6e6e6;
+  text-decoration: none;
+  border-radius: 6px;
+
+}
+
+.sidebar li a:hover {
+  background: #21262d;
+}
+
+/* Bỏ dấu chấm đầu dòng */
+    .panel {
+    display: none;
+    list-style: none;
+    }
+
+.panel li {
+    padding: 0.5px 10px;
+}
+
+
+  .accordion {
+    text-align: left;
+    padding: 8px 10px;
+    color: #e6e6e6;
+      background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 18.5px;
+
+}
+
+/* Hover */
+.accordion:hover {
+  background: #21262d;
+}
+
+/* Mặc định: đóng */
+.accordion::after {
+  content: "▶";
+  font-size: 13px;
+  transition: transform 0.25s ease;
+    
+}
+
+/* Khi mở */
+.accordion.active::after {
+  content: "▼";
+}
+
+.accordion h1 {
+    display: inline;       /* Quan trọng: Bỏ hành vi cấp khối của H1 */
+}
+
+
+/* MAIN CONTENT */
+.main {
+  margin-left: 320px;
+  padding: 32px;
+  margin-top: 56px;
+  max-width: 900px;
+}
+
+.main section {
+  margin-bottom: 48px;
+}
+
+.main h1 {
+  margin-bottom: 12px;
+}
+
+pre {
+  background: #1f232a;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+
+a {
+  color: #58a6ff;
+}
+
+a:hover {
+  color: #79c0ff;
+}
+
+
+
+#search-section {
+  position: absolute;  /* hoặc fixed nếu muốn luôn ở viewport */
+  top: 50%;
+  left: 57.5%;
+  transform: translate(-50%, -50%); /* căn giữa cả chiều ngang + dọc */
+  width: 400px; /* hoặc max-width: 90% cho responsive */
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px 16px; /* to hơn để giống Google */
+  font-size: 1.2rem;
+    border-radius: 24px; /* bo tròn giống Google */
+  border: 1px solid #222;
+  background: #ffffff;
+}
+
+#search-input::placeholder {
+  color: #000000;
+}
+
+#search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  z-index: 100;
+  border-radius: 24px;
+color: #000000;
+}
+
+#search-results li {
+  padding: 6px 12px;
+  cursor: pointer;
+  
+}
+
+#search-results li:hover {
+  background: #000000;
+}
+
+/* Highlight search match */
+mark {
+  background-color: #21c9d23b;
+  color: #000000;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.p{
+  margin-bottom: 10px;
+}

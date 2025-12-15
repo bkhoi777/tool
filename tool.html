@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+</head>
+<body>
+<header class="topbar">
+    <li><a href="index.html">Bocaudimua</a></li>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="windows-office.html">   Windows / Office</a></li>
+             <div>Other</div>
+        </ul>
+        
+    </nav>
+
+</header>
+
+<aside class="sidebar">
+  <nav>
+
+    <button class="accordion"> Windows / Office
+    </button>
+    <div class="panel">
+            <li><a href="active .html">Active Windows / Office</a></li>
+            <li><a href="office.html">Download Office</a></li>
+
+    </div>
+    <ul>
+      <li><a href="adobe.html">Adobe</a></li>
+      <li><a href="autodesk.html">Autodesk</a></li>
+      <li><a href="optimizer.html">Optimizer Win </a></li>
+      <li><a href="tool.html">Tools Windows</a></li>
+    </ul>
+
+
+
+  </nav>
+</aside>
+
+<main class="main">
+  
+<section id="sound">
+    <button class="accordion">     <h1>Bật Loudness Equalization</h1>               </button>
+    <div class="panel">
+      <pre>setx HeadphonesName "CX31993"<br><br>
+setx ReleaseTime "2"<br><br>
+
+Invoke-WebRequest https://raw.githubusercontent.com/Falcosc/enable-loudness-equalisation/main/EnableLoudness.ps1 -OutFile $env:HOMEPATH\EnableLoudness.ps1
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+. $env:HOMEPATH\EnableLoudness.ps1</pre>
+</section>
+
+<section id="bypass">
+    <button class="accordion">    <h1>Pybass win 11         </h1></button>
+            <div class="panel">
+
+<pre>OOBE\BYPASSNRO</pre>
+</section>
+
+</main>
+    
+
+<script src="script.js"></script>
+</body>
+</html>
